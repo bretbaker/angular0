@@ -1,1 +1,15 @@
-<p>menu works!</p>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div>
+      <a routerLink="/" class="navbar-brand">Angular0</a>
+    </div>
+    <ul *ngIf="hardcodedAuthService.isUserLoggedIn()" class="navbar-nav">
+      <li><a routerLink="/welcome/:name" class="nav-link">Home</a></li>
+      <li><a routerLink="/todos" class="nav-link">Todos</a></li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li><a *ngIf="!hardcodedAuthService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="hardcodedAuthService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
