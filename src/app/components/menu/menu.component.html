@@ -4,7 +4,7 @@
       <a routerLink="/" class="navbar-brand">Angular0</a>
     </div>
     <ul *ngIf="hardcodedAuthService.isUserLoggedIn()" class="navbar-nav">
-      <li><a routerLink="/welcome/:name" class="nav-link">Home</a></li>
+      <li><a [routerLink]="['/welcome', name]" class="nav-link">Home</a></li>
       <li><a routerLink="/todos" class="nav-link">Todos</a></li>
     </ul>
     <ul class="navbar-nav navbar-collapse justify-content-end">

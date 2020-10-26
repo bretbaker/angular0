@@ -8,9 +8,12 @@ import { HardcodedAuthService } from 'src/app/services/hardcoded-auth.service';
 })
 export class MenuComponent implements OnInit {
 
+  name: string;
+
   constructor(public hardcodedAuthService: HardcodedAuthService) { }
 
   ngOnInit(): void {
+    this.name = sessionStorage.getItem('authenticatedUser');
   }
 
 }
