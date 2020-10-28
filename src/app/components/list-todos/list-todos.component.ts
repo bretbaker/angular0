@@ -32,11 +32,11 @@ export class ListTodosComponent implements OnInit {
 
   deleteTodo(todoId): void {
     this.todoService.deleteTodo('thomas', todoId).subscribe(response => {
-      this.msg = `Todo ${todoId} deleted`;
+      this.msg = `Todo ${todoId} has successfully been deleted!`;
       this.refreshTodos();
       setTimeout(() => {
         this.msg = null;
-      }, 3000);
+      }, 5000);
     });
   }
 

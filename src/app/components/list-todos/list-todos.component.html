@@ -1,7 +1,13 @@
-<h1>My Todos</h1>
 <div class="container">
-  <div style="height: 50px" class="my-3">
-    <div class="alert alert-success" *ngIf="msg">{{ msg }}</div>
+  <div class="my-3 d-flex align-items-center justify-content-between">
+    <h1 class="d-inline-block mb-0">My Todos</h1>
+    <div
+      class="alert alert-success d-inline-block mb-0 text-center"
+      style="width: 80%; height: 45px"
+      *ngIf="msg"
+    >
+      {{ msg }}
+    </div>
   </div>
   <table class="table">
     <thead>

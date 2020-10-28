@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { HardcodedAuthService } from './hardcoded-auth.service';
+import { HardcodedAuthService } from '../hardcoded-auth/hardcoded-auth.service';
 
 @Injectable({
   providedIn: 'root'
